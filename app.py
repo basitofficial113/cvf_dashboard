@@ -1,15 +1,16 @@
 import streamlit as st
 import pandas as pd
-import numpy as np
 
-st.title("Test Dashboard")
-st.write("If you see this, packages are installed!")
+st.title("✅ Dashboard Test - Basic Packages")
+st.success("If you see this, installation worked!")
 
-# Create simple data
-df = pd.DataFrame({
-    'Name': ['Ali', 'Bilal', 'Farhan'],
-    'Visits': [10, 20, 15]
-})
+# Simple test
+data = {
+    "Staff": ["Ali", "Bilal", "Farhan", "Hassan"],
+    "Visits": [45, 32, 67, 23],
+    "Dealers": [12, 8, 15, 9]
+}
 
+df = pd.DataFrame(data)
 st.dataframe(df)
-st.bar_chart(df.set_index('Name'))
+st.bar_chart(df.set_index("Staff"))
